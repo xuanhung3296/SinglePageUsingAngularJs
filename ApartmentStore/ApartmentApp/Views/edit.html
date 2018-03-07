@@ -1,0 +1,40 @@
+﻿<div class="row" ng-controller="EditController" align="center">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>Edit Apartment</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form ng-show="isEditable()">
+                            <div class="form-group">
+                                <label for="Title">Name</label>
+                                <input name="Title" type="text" class="form-control" placeholder="Enter Name" ng-model="edit.apartment.Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="Singers">Address</label>
+                                <input name="Singers" type="text" class="form-control" placeholder="Enter Address" ng-model="edit.apartment.Address">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ReleaseDate">Price</label>
+                                <input name="ReleaseDate" type="text" class="form-control" placeholder="Enter Price" ng-model="edit.apartment.Price">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="RunTime">Owner</label>
+                                <input name="RunTime" type="text" class="form-control" placeholder="Enter Owner" ng-model="edit.apartment.Owner">
+                            </div>
+                            <button class="btn btn-primary" ng-click="save()" data-dismiss="modal">Save</button>
+                            <button class="btn btn-primary" ng-click="cancel()" data-dismiss="modal">Cancel</button>
+
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>

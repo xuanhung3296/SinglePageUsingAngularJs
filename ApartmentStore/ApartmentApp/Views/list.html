@@ -1,0 +1,25 @@
+﻿    <div ng-controller="ApartmentListController" align="center">
+        <table class="table table-bordered" style="width:80%; text-align:center">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="apartment in apartments" >
+                    <td>{{apartment.Name}}</td>
+                    <td>{{apartment.Address}}</td>
+                    <td>
+                        <a href="#!/details/{{apartment.Id}}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                        <a ng-click="delete(apartment)" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    </td>  
+                </tr>
+            </tbody>
+        </table>
+        
+        <button class="btn btn-danger btn-sm" ng-click="create()" data-target="#myModal" data-toggle="modal">Add</button>
+        <div ng-include="'/ApartmentApp/Views/edit.html'"></div>  
+    </div>
+

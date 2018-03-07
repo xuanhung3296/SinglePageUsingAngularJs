@@ -1,0 +1,14 @@
+﻿<div ng-controller="DetailsController" align="center" >
+    <div style="text-align:center">
+        <h3>{{apartment.Name}}</h3>
+        <!--<p>Mã : {{apartment.Id}}</p>-->
+        <p>Địa chỉ : {{apartment.Address}}</p>
+        <p>Giá :  {{apartment.Price}} đồng</p>
+        <p>Chủ sở hữu: {{apartment.Owner}}</p>
+        <br /><br />
+        <a href="#/list/" class="btn btn-info btn-default">Back to List</a>
+        <button class="btn btn-default btn-sm" ng-click="edit()" data-target="#myModal" data-toggle="modal">Edit</button>
+        <div ng-include="'/ApartmentApp/Views/edit.html'"></div>  
+    </div>
+</div>  
+
